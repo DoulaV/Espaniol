@@ -69,3 +69,13 @@ test('failed connect falls back to this device', async () => {
   await h.sync.start();
   assert.equal(h.statuses.at(-1), 'local');
 });
+
+test('switching remote on later pulls newer data from it', async () => {
+  const h = harness({localData: {updated: 1, anki: 0}});
+  await h.sync.start();
+  const remote = fakeRemote({updated: 50, anki: 900});
+  await h.sync.useRemote(remote); await tick();
+  assert.equal(h.S.anki, 900);
+  await h.sync.useRemote(null);
+  assert.equal(h.statuses.at(-1), 'local');
+});
