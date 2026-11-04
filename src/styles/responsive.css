@@ -1,0 +1,12 @@
+/* Responsive and reduced-motion overrides. */
+@media (max-width:420px){
+  .hero{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .hero-stats{align-items:center}
+  h1{font-size:30px}
+  .stat .num{font-size:22px}
+}
+@media (prefers-reduced-motion: reduce){
+  .aurora i{animation:none}
+  .sheet .panel{animation:none}
+  .btn,.road .fill,.toast{transition:none}
+}

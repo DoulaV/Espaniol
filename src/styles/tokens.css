@@ -1,0 +1,43 @@
+/* Design tokens: light theme, dark theme (auto and forced). */
+:root{
+  --bg:#edf0f6;
+  --ink:#0d1424;
+  --ink2:rgba(13,20,36,.64);
+  --ink3:rgba(13,20,36,.42);
+  --glass:rgba(255,255,255,.44);
+  --glass-strong:rgba(255,255,255,.70);
+  --glass-edge:rgba(255,255,255,.80);
+  --glass-shadow:rgba(40,46,90,.16);
+  --sheen:rgba(255,255,255,.95);
+  --track:rgba(13,20,36,.09);
+  --accent:#ff5a3c;
+  --accent-2:#ff9f1c;
+  --accent-ink:#ffffff;
+  --sky:#2f9bff;
+  --good:#16a865;
+  --warn:#d98c00;
+  --blob-1:#ff8a5b;
+  --blob-2:#ffd166;
+  --blob-3:#62c6ff;
+  --blob-4:#ff74a6;
+  --blob-op:.78;
+  --bubble:255,255,255;
+  --scrim:rgba(237,240,246,.55);
+  --f-ui:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --f-num:ui-rounded,"SF Pro Rounded","Nunito",-apple-system,"Segoe UI",sans-serif;
+  --r-xl:30px;--r-lg:24px;--r-md:18px;--r-pill:999px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#060914;--ink:#f2f4fb;--ink2:rgba(242,244,251,.68);--ink3:rgba(242,244,251,.42);
+  --glass:rgba(255,255,255,.075);--glass-strong:rgba(255,255,255,.13);--glass-edge:rgba(255,255,255,.20);
+  --glass-shadow:rgba(0,0,0,.5);--sheen:rgba(255,255,255,.38);--track:rgba(255,255,255,.10);
+  --accent:#ff6a4d;--accent-2:#ffb340;--sky:#5cb3ff;--good:#36d08a;--warn:#ffbf3d;
+  --blob-1:#c2410c;--blob-2:#a16207;--blob-3:#0e5a9c;--blob-4:#9d1b5a;--blob-op:.55;
+  --bubble:200,220,255;--scrim:rgba(6,9,20,.55);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#060914;--ink:#f2f4fb;--ink2:rgba(242,244,251,.68);--ink3:rgba(242,244,251,.42);
+  --glass:rgba(255,255,255,.075);--glass-strong:rgba(255,255,255,.13);--glass-edge:rgba(255,255,255,.20);
+  --glass-shadow:rgba(0,0,0,.5);--sheen:rgba(255,255,255,.38);--track:rgba(255,255,255,.10);
+  --accent:#ff6a4d;--accent-2:#ffb340;--sky:#5cb3ff;--good:#36d08a;--warn:#ffbf3d;
+  --blob-1:#c2410c;--blob-2:#a16207;--blob-3:#0e5a9c;--blob-4:#9d1b5a;--blob-op:.55;
+  --bubble:200,220,255;--scrim:rgba(6,9,20,.55);color-scheme:dark}
