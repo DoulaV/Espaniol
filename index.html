@@ -117,6 +117,20 @@
       <svg class="chart" id="retestChart" viewBox="0 0 520 140" role="img" aria-label="Retest scores by month"></svg>
     </div>
 
+    <div class="glass card" style="display:flex;flex-direction:column;gap:14px" id="syncCard">
+      <div><h2 style="font-size:17px">Sync across devices</h2><div class="sub" id="ghInfo"></div></div>
+      <div id="ghSetup" style="display:flex;flex-direction:column;gap:14px">
+        <ol class="rules">
+          <li>Tap <strong>Make a token</strong>. GitHub opens with the right box already ticked (gist only).</li>
+          <li>Set Expiration to <strong>No expiration</strong>, scroll down, tap <strong>Generate token</strong> and copy it.</li>
+          <li>Paste it below and tap <strong>Connect</strong>. Do the same on your other devices.</li>
+        </ol>
+        <div><label class="lab" for="ghToken">GitHub token</label><input class="field" id="ghToken" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="ghp_..."></div>
+        <div class="row wrap"><button class="btn primary sm" id="ghConnect">Connect</button><a class="btn ghost sm" href="https://github.com/settings/tokens/new?scopes=gist&amp;description=Mi%20Espa%C3%B1ol%20sync" target="_blank" rel="noopener">Make a token</a></div>
+      </div>
+      <div id="ghOn" class="row wrap" hidden><button class="btn primary sm" id="ghSyncNow">Sync now</button><a class="btn ghost sm" href="https://gist.github.com/" target="_blank" rel="noopener">See my gists</a><button class="btn ghost sm" id="ghDisconnect">Turn off on this device</button></div>
+    </div>
+
     <div class="glass card" style="display:flex;flex-direction:column;gap:14px">
       <h2 style="font-size:17px">Settings and backup</h2>
       <div><label class="lab" for="startHours">Hours you already had before starting</label><input class="field" id="startHours" type="number" min="0" step="1" inputmode="numeric"></div>

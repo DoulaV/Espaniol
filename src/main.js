@@ -11,6 +11,7 @@ import {renderVer, initWatch} from './views/watch.js';
 import {renderResources} from './views/resources.js';
 import {initLogSheet} from './views/logSheet.js';
 import {initSession, sessionActive} from './views/session.js';
+import {initSyncSettings} from './views/syncSettings.js';
 import {registerSW} from 'virtual:pwa-register';
 
 onRender(renderHoy);
@@ -25,6 +26,7 @@ initTheme();
 initTabs();
 renderResources();
 initProgress();
+initSyncSettings();
 initWatch();
 initLogSheet();
 initSession();

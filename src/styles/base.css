@@ -3,6 +3,7 @@
 html,body{min-height:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
+a.btn{text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:12px}
 [hidden]{display:none!important}

@@ -32,13 +32,22 @@ public/                 app icons
 ## Storage and sync
 
 Data is always saved on the device first (`localStorage`), so the app works
-offline. Sync to other devices is an optional, swappable "adapter":
+offline.
 
-- `src/storage/sync.js` is the engine. It keeps the latest version by
-  timestamp (last write wins), the same rule the original app used.
-- `src/storage/adapters/template.js` describes the three functions an adapter
-  needs (`connect`, `subscribe`, `save`) and has a Supabase sketch.
-- `src/storage/config.js` is the one line you change to switch it on.
+**Sync between devices** uses a private (secret) GitHub gist on your account.
+Turn it on in Progreso > Sync across devices: make a token with only the
+`gist` permission, paste it, tap Connect. Do the same on each device. The
+token stays in that browser only. The app checks GitHub when it opens, when
+you come back to it, and every minute while it is on screen. If two devices
+change things while both are offline, the most recent change wins.
+
+How it is built, if you ever want another service:
+
+- `src/storage/sync.js` is the engine (last write wins by timestamp).
+- `src/storage/adapters/gist.js` talks to GitHub.
+- `src/storage/adapters/template.js` describes the three functions any
+  adapter needs (`connect`, `subscribe`, `save`), with a Supabase sketch.
+- `src/storage/config.js` picks which adapter is used.
 
 Moving data from the old Claude artifact: open the old version, go to
 Progreso, tap **Copy backup**. In the new app, tap **Restore backup**, paste,
